@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static WebService.Utility.StringUtils.newline;
+
 @RestController
 public class APIController {
 
@@ -15,8 +17,8 @@ public class APIController {
 
     @GetMapping(value = "/")
     public String getPage() {
-        return "Welcome to this RESTful WebService. /n" +
-                "Here you can add users to the database and show a list of them all. /n" +
+        return "Welcome to this RESTful WebService." + newline +
+                "Here you can add users to the database and show a list of them all." + newline +
                 "New Features will be added soon, so keep track of the developments.";
     }
 
